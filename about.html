@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="about.css">
+  
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "ynESIjwmrmBsfy9Em",
+      });
+   })();
+</script>
+</head>
+<body>
+ <div class="contact">
+<div class="container">
+  <form onsubmit="emailSend(); reset(); return false;">
+    <h3> Contact Me</h3>
+    <input type="text" id="name" placeholder="Enter Name" required></input>
+    <input type="email" id="email" placeholder="Email Id" required></input>
+    <input type="text" id="subject" placeholder="Subject" required></input>
+    <textarea id="message" rows="4"  placeholder="How can we help you?"></textarea> 
+    <button type="submit" onclick="sendMail()">Submit</button>
+   
+  </form>
+</div>
+ </div>
+<!-- <script src="https://smtpjs.com/v3/smtp.js">
+</script> -->
+
+
+<script src="script.js"></script>
+
+ <!-- <script src="https://smtpjs.com/v3/smtp.js"></script>
+ <script>
+  function sendEmail(){
+    Email.send({
+      Host : "smtp.gmail.com",
+      Username : "sakshipathak3007@gmail.com",
+      Password : "password",
+      To : 'sakshipathak3007@gmail.com',
+      From : document.getElementById("email").value,
+      Subject : "New Contact From Enquiry",
+      Body : "And this is the body"
+    }).then(
+      message => alert(message)
+    );
+  }
+ </script> -->
+</body>
+</html>
